@@ -57,7 +57,42 @@ namespace API_PetShop.Controller
         public IActionResult ObterPorData(DateTime data)
         {
             var cachorro = _context.Cachorros.Where(x => x.DataDoBanho.Date == data.Date);
+            if (!cachorro.Any())
+                return NotFound();
+                
             return Ok(cachorro);
+        }
+
+        [HttpPut]
+        public IActionResult Atualizar(int id, Cachorro cachorro)
+        {
+            var cachorroAtualizado = _context.Cachorros.Find(id);
+            if (cachorroAtualizado == null)
+                return NotFound();
+
+            cachorroAtualizado.Nome = cachorro.Nome;
+            cachorroAtualizado.Raca = cachorro.Raca;
+            cachorroAtualizado.Porte = cachorro.Porte;
+            cachorroAtualizado.ValorBanho = cachorro.ValorBanho;
+            cachorroAtualizado.DataDoBanho = cachorro.DataDoBanho;
+
+            _context.Cachorros.Update(cachorroAtualizado);
+            _context.SaveChanges();
+
+            return Ok(cachorroAtualizado);
+
+        }
+
+        [HttpDelete]
+        public IActionResult Deletar(int id)
+        {
+            var cachorroDeletar = _context.Cachorros.Find(id);
+            if (cachorroDeletar == null)
+                return NotFound();
+
+            _context.Cachorros.Remove(cachorroDeletar);
+            _context.SaveChanges();
+            return NoContent();
         }
     }
 }

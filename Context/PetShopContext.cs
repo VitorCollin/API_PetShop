@@ -16,6 +16,6 @@ namespace API_PetShop.Context
         }
 
         public DbSet<Cachorro> Cachorros { get; set; }
-    }
 
+    }
 }

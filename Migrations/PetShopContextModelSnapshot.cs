@@ -24,11 +24,11 @@ namespace API_PetShop.Migrations
 
             modelBuilder.Entity("API_PetShop.Entidades.Cachorro", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("CachorroId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CachorroId"));
 
                     b.Property<DateTime>("DataDoBanho")
                         .HasColumnType("datetime(6)");
@@ -45,7 +45,7 @@ namespace API_PetShop.Migrations
                     b.Property<decimal>("ValorBanho")
                         .HasColumnType("decimal(65,30)");
 
-                    b.HasKey("Id");
+                    b.HasKey("CachorroId");
 
                     b.ToTable("Cachorros");
                 });

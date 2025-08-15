@@ -146,3 +146,4 @@ C:\Users\vitor\Desktop\Bootcamp\Projetos Pessoais\API_PetShop\obj\Debug\net8.0\A
 C:\Users\vitor\Desktop\Bootcamp\Projetos Pessoais\API_PetShop\obj\Debug\net8.0\ref\API_PetShop.dll
 C:\Users\vitor\Desktop\Bootcamp\Projetos Pessoais\API_PetShop\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\vitor\Desktop\Bootcamp\Projetos Pessoais\API_PetShop\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\vitor\Desktop\Bootcamp\Projetos Pessoais\API_PetShop\obj\Debug\net8.0\API_PetShop.sourcelink.json

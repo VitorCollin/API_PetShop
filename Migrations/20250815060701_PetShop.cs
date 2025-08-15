@@ -19,7 +19,7 @@ namespace API_PetShop.Migrations
                 name: "Cachorros",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    CachorroId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Nome = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -31,7 +31,7 @@ namespace API_PetShop.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cachorros", x => x.Id);
+                    table.PrimaryKey("PK_Cachorros", x => x.CachorroId);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
         }

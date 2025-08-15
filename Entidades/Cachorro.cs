@@ -7,13 +7,12 @@ namespace API_PetShop.Entidades
 {
     public class Cachorro
     {
-        public int Id { get; set; }
+        public int CachorroId { get; set; }
         public string Nome { get; set; }
         public string Raca { get; set; }
         public EnumPorte Porte { get; set; }
         public decimal ValorBanho { get; set; }
         public DateTime DataDoBanho { get; set; }
-
         
     }
 }
